@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: Capston Projet
+version: 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/07cbfc09-d42f-4cf1-bda1-3e60c5e240e6/ # baseUri: http://localhost:8081
+/users:
+  get:
+    description: get all user
+    responses:
+      200:
+        body:
+          application/json:
+            
+            example: !include all_usrs_file.json/Get_All_users.json
+  post:
+    description: Add New user
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include all_usrs_file.json/Post_users.json   
+  /{id}:  
+   get:
+     description:  Get by Id
+     responses:
+       200:
+         body:
+           application/json:
+             example: !include all_usrs_file.json/Get_All_users.json
+   put:
+     responses:
+       201:
+         body:
+           application/json:
+             example: !include all_usrs_file.json/Put_users.json
+   delete:
+     responses:
+       200:
+         body:
+           application/json:
+             example: {"message":"message deleted"}
+               
+             
+    
+               
+     
+               
+  
+
+ 
+    
